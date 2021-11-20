@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+}
+
+:root {
+     --pri-bg-clr: hsl(0, 0%, 20%);
+     --pri-fnt-clr: hsl(0, 0%, 100%);
+     --wrapper-padding: 1.25rem;
+     --wrapper-gap: 1.25rem;
+     --wrapper-max-width: 100rem;
+     --card-width: 15.625rem;
+     --card-bg-clr: hsl(0, 0%, 100%);
+     --card-fnt-clr: hsl(0, 0%, 20%);
+     --card-border-radius: 0.313rem;
+     --card-padding: 0.313rem;
+     --card-shadow-size: 0.313rem;
+     --card-shadow-clr: hsla(0, 0%, 0%, 0.5);
+     --thumb-border-radius: 0.313rem;
+     --play-padding-tandb: 0.625rem;
+     --play-padding-landr: 0.938rem;
+     --play-border-radius: 0.313rem;
+     --play-bg-clr: hsl(120, 100%, 25%);
+     --play-fnt-clr: hsl(0, 0%, 100%);
+}
+
+.wrapper {
+     padding: var(--wrapper-padding);
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: center;
+     gap: var(--wrapper-gap);
+     max-width: var(--wrapper-max-width);
+}
+
+.card {
+     width: var(--card-width);
+     background: var(--card-bg-clr);
+     color: var(--card-fnt-clr);
+     border-radius: var(--card-border-radius);
+     border: 0;
+     padding-top: var(--card-padding);
+     padding-left: var(--card-padding);
+     padding-right: var(--card-padding);
+     padding-bottom: var(--card-padding);
+     box-shadow: 0px var(--card-shadow-size) var(--card-shadow-size)
+          var(--card-shadow-clr);
+     transition: all 0.25s ease;
+}
+
+.thumb {
+     display: block;
+     position: relative;
+     width: 100%;
+     border-radius: var(--thumb-border-radius);
+     transition: all 0.25s ease;
+}
+
+.play {
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     padding-top: var(--play-padding-tandb);
+     padding-left: var(--play-padding-landr);
+     padding-right: var(--play-padding-landr);
+     padding-bottom: var(--play-padding-tandb);
+     border-radius: var(--play-border-radius);
+     background: var(--play-bg-clr);
+     color: var(--play-fnt-clr);
+     font-weight: bold;
+     opacity: 0;
+     transition: all 0.25s ease;
+}
+
